@@ -1,0 +1,393 @@
+
+
+
+
+<!DOCTYPE html>
+
+<html>
+
+<!--
+	Thanks to jQuery Tools
+
+-->
+
+<head>
+	<title>Casting Learning into Flowing Streams: This is What We Did in Our Class</title>
+
+	<!-- include the Tools -->
+	<script src="http://cdn.jquerytools.org/1.2.5/full/jquery.tools.min.js"></script>
+	<script src="http://siteslab.org/flowplayer/flowplayer-3.2.6.min.js"></script>
+	
+
+<script type="text/javascript">
+	if ( (navigator.userAgent.indexOf('iPad') != -1)) {
+		document.location = "videos.html";
+	}
+</script>
+
+<style>
+.overlay {
+	
+	/* must be initially hidden */
+	display:none;
+	
+	/* place overlay on top of other elements */
+	z-index:10000;
+	
+	/* styling */
+	background-color:#333;
+	background:url(http://siteslab.org/img/overlay/white-trans.png) no-repeat;
+	width:640px;	
+	min-height:200px;
+	border:1px solid #666;
+	
+	/* CSS3 styling for latest browsers */
+	-moz-box-shadow:0 0 90px 5px #000;
+	-webkit-box-shadow: 0 0 90px #000;	
+}
+
+
+
+
+.close {
+	background:url(img/overlay/close.png) no-repeat;
+	position:absolute;
+	right:-15px;
+	top:-15px;
+	cursor:pointer;
+	height:35px;
+	width:35px;
+}
+
+a.player { 		
+	display:block;
+	height:450px;			
+}
+
+
+
+
+/* tooltip styling. by default the element to be styled is .tooltip  */
+.tooltip {
+	display:none;
+	background:transparent url(http://siteslab.org/img/tooltips/white.png);
+	font-size:12px;
+	height:60px;
+	width:160px;
+	padding:25px;
+	color:#000;	
+}
+
+body {padding: 0; margin: 0; text-align: center; background: #fff; }
+
+div#twrapper {
+    width: 1020px;
+    border: 1px solid #ffffff;
+    text-align: center;
+    font-size: 12pt;
+    font-family: Courier New, monospace; 
+
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    margin-left: -510px;
+}
+
+div#portwrapper {
+    width: 400px;
+    border: 1px solid #ffffff;
+    text-align: center;
+    font-size: 12pt;
+    font-family: Courier New, monospace; 
+
+    position: absolute;
+    top: 600px;
+    left: 50%;
+    margin-left: -200px;
+}
+
+div#fwrapper {
+    width: 1020px;
+    border: 1px solid #ffffff;
+    text-align: center;
+    font-size: 12pt;
+    font-family: Courier New, monospace; 
+
+    position: absolute;
+    top: 700px;
+    left: 50%;
+    margin-left: -510px;
+}
+
+div#pwrapper {width: 1020px; margin: 0 auto; background: #fff; text-align: center; position: absolute; top:26px; left:50%; margin-left: -510px;}
+div#swrapper {width: 824; margin: 0 auto; background: #fff; text-align: center; position: absolute; top:620px; left:50%; margin-left: -412px;}
+
+</style>
+
+<script>
+$(function() {
+
+	// setup overlay actions to the images
+	$("a[rel]").overlay({
+	
+
+
+		// use the Apple effect for overlay
+		effect: 'apple',		
+		
+		expose: '#789',		
+		
+		top: '05',
+		
+		autoPlay: true,
+		
+		autoBuffering: true,
+		
+		onLoad: function(content) {
+			// find the player contained inside this overlay and load it
+			this.getOverlay().find("a.player").flowplayer(0).load();
+		},
+		
+		onClose: function(content) {
+			$f().unload();
+		}
+	});				
+	
+	// install flowplayers
+	
+	$("a.player").flowplayer("http://siteslab.org/flowplayer/flowplayer-3.2.7.swf"); 
+	
+	
+});	
+</script>
+
+
+
+	
+</head><body link="#666666" vlink="#666666">
+
+<div id="twrapper">
+This is What We Did in Our Class
+</div>
+<div id="pwrapper">
+
+<div id="eddy">
+	<a rel="#overlay1" href="#"><img src="images/p1.png" border="0" title="&quot;Performance and Portfolios,&quot; <BR>An overview discussing scholarship on performance and portfolios."/></a>
+	<a rel="#overlay2" href="#"><img src="images/p2.png" border="0" title="&quot;Composition: Revisiting the Process,&quot;<br>Jackclyn Ngo describes the composition of her mashup."/></a>
+	<a rel="#overlay3" href="#"><img src="images/p3.png" border="0" title="&quot;Composition: Mashing and Remixing,&quot;<br>Kyle Stevens discusses juxtaposition and complementarity in mashups."/></a>
+	<a rel="#overlay4" href="#"><img src="images/p4.png" border="0" title="&quot;Performances and Processes,&quot;<br>A look at processes and emergent knowledge as they relate to performance and composing."/></a>
+	<a rel="#overlay5" href="#"><img src="images/p5.png" border="0" title="&quot;Collaboration,&quot;<br>An exploration of the ways collaboration relates to performing, composing, and learning."/></a>
+	<a rel="#overlay6" href="#"><img src="images/p6.png" border="0" title="&quot;Litception: Reflection on a Web Essay Collaboration,&quot;<br>Sydney Stegall explores a group essay and presentation."/></a>
+	<a rel="#overlay7" href="#"><img src="images/p7.png" border="0" title="&quot;Creativity and Flow,&quot;<br>Jackclyn Ngo presents research on flow and discusses class projects and creativity."/></a>
+	<a rel="#overlay8" href="#"><img src="images/p8.png" border="0" title="&quot;Improvisation, Creativity, and Performance,&quot;<br>A look at improvisation, focusing on a portfolio screencast by Sarah Brady."/></a>
+	<a rel="#overlay9" href="#"><img src="images/p9.png" border="0" title="&quot;Reflection,&quot;<br>Reflections perform learning through their composition, as we see in Hannah Easley's portfolio screencast."/></a>
+	<a rel="#overlay10" href="#"><img src="images/p10.png" border="0" title="&quot;Casting Learning into Flowing Streams,&quot;<br>Screencasts blur modes and genres, opening new registers for telling stories."/></a>
+</div>	
+
+</div> 
+
+<div id="swrapper">
+
+<div id="sluice">	
+	<a rel="#overlay12" href="#"><img src="images/s1.png" border="0" title="&quot;Aladdin and Blow,&quot;<br>Austin Cooper reports that his experience in the class changed his thinking about composition; here is his mashup."/></a>
+	<a rel="#overlay13" href="#"><img src="images/s2.png" border="0" title="&quot;Ely and Elija,&quot;<br>In her portfolio reflection, Sarah Brady discusses this screencast on <i>The Road</i>."/></a>
+	<a rel="#overlay14" href="#"><img src="images/s3.png" border="0" title="&quot;Web Essay Screencast,&quot;<br>Sean Mattio reflects on composing his Web essay."/></a>
+	<a rel="#overlay15" href="#"><img src="images/s4.png" border="0" title="&quot;Watchmen and Vietnam,&quot;<br>Katie Meyer's essay on <i>Watchmen</i>."/></a>
+	<a rel="#overlay16" href="#"><img src="images/s5.png" border="0" title="&quot;My Precious,&quot;<br>Jackclyn Ngo's mashup of <i>Juno</i> and <i>The Lord of the Rings</i>."/></a>
+	<a rel="#overlay17" href="#"><img src="images/s6.png" border="0" title="&quot;The Road Down Katrina,&quot;<br>Austin Shaw's screencast on <i>The Road</i>."/></a>
+	<a rel="#overlay18" href="#"><img src="images/s7.png" border="0" title="&quot;The Darko Side of Harry Potter,&quot;<br>Sydney Stegall's mashup of <i>The Sorcerer's Stone</i> and <i>Donnie Darko</i>."/></a>
+	<a rel="#overlay19" href="#"><img src="images/s8.png" border="0" title="&quot;This is What I Did in My Portfolio,&quot;<br>Hannah Easley reflects on composing mashups and screencasts."/></a>
+	<a rel="#overlay20" href="#"><img src="images/s9.png" border="0" title="&quot;All the Heroes,&quot;<br>Kelley Wollman's screencast on <i>Watchmen</i>."/></a>
+</div>	
+
+</div> 
+
+<div id="portwrapper">
+Selected Portfolio Materials
+</div>
+
+<div id="fwrapper">
+<a rel="#overlay11" href="#">Opening</a> | 
+<a href="videos.html">Video Index and Transcripts</a> | 
+<a href="citations.html" title="Citations.">Citations</a>
+</div>
+
+
+
+
+
+<!-- overlays for  videos -->
+
+
+
+<div class="overlay" id="overlay1">
+	<a class="player" href="http://siteslab.org/tiwid/videos/p1.mp4" id="ipad">
+		&nbsp;
+	</a>
+</div>
+
+
+<div class="overlay" id="overlay2">
+	<a class="player" href="http://siteslab.org/tiwid/videos/p2.mp4">
+		&nbsp;
+	</a>
+</div>
+
+<div class="overlay" id="overlay3">
+	<a class="player" href="http://siteslab.org/tiwid/videos/p3.mp4">
+	</a>
+</div>
+
+<div class="overlay" id="overlay4">
+	<a class="player" href="http://siteslab.org/tiwid/videos/p4.mp4">
+		&nbsp;
+	</a>
+</div>
+
+<div class="overlay" id="overlay5">
+	<a class="player" href="http://siteslab.org/tiwid/videos/p5.mp4">
+		&nbsp;
+	</a>
+</div>
+
+<div class="overlay" id="overlay6">
+	<a class="player" href="http://siteslab.org/tiwid/videos/p6.mp4">
+		&nbsp;
+	</a>
+</div>
+
+<div class="overlay" id="overlay7">
+	<a class="player" href="http://siteslab.org/tiwid/videos/p7.mp4">
+		&nbsp;
+	</a>
+</div>
+
+<div class="overlay" id="overlay8">
+	<a class="player" href="http://siteslab.org/tiwid/videos/p8.mp4">
+		&nbsp;
+	</a>
+</div>
+
+<div class="overlay" id="overlay9">
+	<a class="player" href="http://siteslab.org/tiwid/videos/p9.mp4">
+		&nbsp;
+	</a>
+</div>
+
+<div class="overlay" id="overlay10">
+	<a class="player" href="http://siteslab.org/tiwid/videos/p10.mp4">
+		&nbsp;
+	</a>
+</div>
+
+
+
+<div class="overlay" id="overlay11">
+	<a class="player" href="http://siteslab.org/tiwid/videos/opening.mp4">	
+	</a>
+</div>
+
+<div class="overlay" id="overlay12">
+	<a class="player" href="http://siteslab.org/tiwid/videos/s1.mp4">
+		&nbsp;
+	</a>
+</div>
+
+<div class="overlay" id="overlay13">
+	<a class="player" href="http://siteslab.org/tiwid/videos/s2.mp4">
+		&nbsp;
+	</a>
+</div>
+
+<div class="overlay" id="overlay14">
+	<a class="player" href="http://siteslab.org/tiwid/videos/s3.mp4">
+		&nbsp;
+	</a>
+</div>
+
+<div class="overlay" id="overlay15">
+	<a class="player" href="http://siteslab.org/tiwid/videos/s4.mp4">
+		&nbsp;
+	</a>
+</div>
+
+<div class="overlay" id="overlay16">
+	<a class="player" href="http://siteslab.org/tiwid/videos/s5.mp4">
+		&nbsp;
+	</a>
+</div>
+
+<div class="overlay" id="overlay17">
+	<a class="player" href="http://siteslab.org/tiwid/videos/s6.mp4">
+		&nbsp;
+	</a>
+</div>
+
+<div class="overlay" id="overlay18">
+	<a class="player" href="http://siteslab.org/tiwid/videos/s7.mp4">
+		&nbsp;
+	</a>
+</div>
+
+<div class="overlay" id="overlay19">
+	<a class="player" href="http://siteslab.org/tiwid/videos/s8.mp4">
+		&nbsp;
+	</a>
+</div>
+
+<div class="overlay" id="overlay20">
+	<a class="player" href="http://siteslab.org/tiwid/videos/s9.mp4">
+		&nbsp;
+	</a>
+</div>
+
+<div class="overlay" id="overlay21">
+	<a class="player" href="http://siteslab.org/tiwid/videos/citations.mp4">
+		&nbsp;
+	</a>
+</div>
+
+
+
+
+
+
+<script>
+
+// initialize tooltip
+$("#eddy img[title]").tooltip({
+
+   // tweak the position
+   offset: [20, 20],
+
+   // use the "slide" effect
+   effect: 'slide'
+
+// add dynamic plugin with optional configuration for bottom edge
+}).dynamic({ bottom: { direction: 'down', bounce: true } });
+
+</script>
+
+<script>
+
+// initialize tooltip
+$("#sluice img[title]").tooltip({
+
+   // tweak the position
+   offset: [20, 20],
+
+   // use the "slide" effect
+   effect: 'slide'
+
+// add dynamic plugin with optional configuration for bottom edge
+}).dynamic({ bottom: { direction: 'down', bounce: true } });
+
+</script>
+
+<script>
+$("#overlay11").overlay({api:true}).load();
+</script>
+
+</body>
+
+</html>
